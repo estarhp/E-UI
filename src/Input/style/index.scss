@@ -1,0 +1,116 @@
+@import "mixins";
+@import "src/style/common";
+.e-input-inner {
+  position: relative;
+  border: none;
+  width: 100%;
+  white-space: nowrap;
+  &:focus {
+   outline: 0;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: gray;
+  }
+
+}
+
+.e-input {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid gray;
+  border-radius: .5rem;
+  padding: 0 10px;
+  &:focus-within {
+    border-color: $primary;
+  }
+}
+
+
+.e-input-disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+
+.e-input-group-prefix, .e-input-group-suffix {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 0 0;
+  font-weight: 500;
+  font-size: 16px;
+  white-space: nowrap;
+  text-align: center;
+  background-color: white;
+}
+
+.e-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 36px;
+  svg {
+    color: black;
+  }
+
+}
+
+.e-input-md {
+  height: $input-height-md;
+
+  .e-input-inner{
+    font-size: 16px;
+    @include input-size($input-height,$input-padding-y,$input-padding-x,$input-margin-y,$input-margin-x);
+  }
+
+  .e-input-group-prefix, .e-input-group-suffix {
+    font-size: 16px;
+  }
+}
+.e-input-lg {
+
+  height: $input-height-lg;
+  .e-input-inner{
+    font-size: 20px;
+    @include input-size($input-height-lg,$input-padding-y-lg,$input-padding-x-lg,$input-margin-y-lg,$input-margin-x-lg);
+  }
+  .e-input-group-prefix, .e-input-group-suffix {
+    font-size: 20px;
+  }
+
+}
+.e-input-sm {
+
+  height: $input-height-sm;
+  .e-input-inner{
+    font-size: 10px;
+    @include input-size($input-height-sm,$input-padding-y-sm,$input-padding-x-sm,$input-margin-y-sm,$input-margin-x-sm);
+  }
+
+  .e-input-group-prefix, .e-input-group-suffix {
+    font-size: 10px;
+  }
+
+}
+
+.e-input-round {
+    border-radius: 2rem;
+}
+
+
+
+
+
+
+
+
+

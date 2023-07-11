@@ -2,7 +2,7 @@ $primary: #409EFF;
 $hover-primary: #66B1FF;
 $success: #67C23A;
 $hover-success: #85CE61;
-$info: #909399;
+$info: #38383b;
 $hover-info: #A6A9AD;
 $warning : #E6A23C;
 $hover-warning : #EBB563;
@@ -67,10 +67,38 @@ $btn-border-radius-md: $border-radius-md !default;
 $btn-border-radius-sm: $border-radius-sm !default;
 
 
+//输入框
+$input-height : 1rem !default;
+$input-margin-y: .375rem !default;
+$input-margin-x: .5rem !default;
+$input-padding-y: .375rem !default;
+$input-padding-x: .5rem !default;
 
 
 
+//不同尺寸
 
+
+// 大尺寸
+$input-height-lg: 3rem !default;
+$input-margin-y-lg: 0rem !default;
+$input-margin-x-lg: 0rem !default;
+$input-padding-y-lg: 0rem !default;
+$input-padding-x-lg: .5rem !default;
+
+// 中等尺寸
+$input-height-md: 2rem !default;
+$input-margin-y-md: .375rem !default;
+$input-margin-x-md: .5rem !default;
+$input-padding-y-md: 0rem !default;
+$input-padding-x-md: .4rem !default;
+
+// 小尺寸
+$input-height-sm: 1.2rem !default;
+$input-margin-y-sm: .4rem !default;
+$input-margin-x-sm: .3rem !default;
+$input-padding-y-sm: 0rem !default;
+$input-padding-x-sm: .2rem !default;
 
 
 

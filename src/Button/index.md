@@ -9,7 +9,7 @@ nav:
 Button 按钮
 
 ```jsx
-import Button from "./index";
+import {Button} from "E-UI";
 
 function click(){
     alert("我被点击了")
@@ -42,10 +42,11 @@ export default () =>
 
 ```
 
-| 参数       | 说明      | 类型      | 可选值                                         | 默认值   |
-|----------|---------|---------|---------------------------------------------|-------|
-| size     | 尺寸      | string  | lg/md/sm                                    | md    |
-| type     | 类型      | string  | primary / success / warning / danger / info | ---   |
-| round    | 是否为圆角按钮 | boolean | ---                                         | false |
-| circle   | 是否为圆形按钮 | boolean | ---                                         | false |
-| disabled | 是否为禁用状态 | boolean | ---                                         | false |
+| 参数       | 说明      | 类型       | 可选值                                         | 默认值   |
+|----------|---------|----------|---------------------------------------------|-------|
+| size     | 尺寸      | string   | lg/md/sm                                    | md    |
+| type     | 类型      | string   | primary / success / warning / danger / info | ---   |
+| round    | 是否为圆角按钮 | boolean  | ---                                         | false |
+| circle   | 是否为圆形按钮 | boolean  | ---                                         | false |
+| disabled | 是否为禁用状态 | boolean  | ---                                         | false |
+| handleClick | 点击回调    | function | ---                                         | ----  |
