@@ -15,8 +15,9 @@ const Switch=forwardRef<HTMLDivElement,SwitchProps>((props,ref) =>{
   function handleClick (event: { target: any; }){
 
   }
-  return <div className={classes} onClick={handleClick}>
-
+  return <div className={classes}>
+    <input  onClick={handleClick} type="checkbox" id="toggle" style={{display:"none"}}/>
+    <label htmlFor="toggle" className="e-switch-label"></label>
   </div>
 })
 
