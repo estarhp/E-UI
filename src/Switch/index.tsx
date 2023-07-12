@@ -6,6 +6,7 @@ export interface SwitchProps {
    prefix?:React.ReactNode
    suffix?:React.ReactNode
   disabled?:boolean
+  className:string
   handleClick:React.MouseEventHandler<HTMLInputElement>
   handleChange: React.ChangeEventHandler<HTMLInputElement>
 
@@ -17,9 +18,10 @@ const Switch=forwardRef<HTMLDivElement,SwitchProps>((props,ref) =>{
     suffix,
     handleClick,
     disabled=false,
+    className="",
     handleChange
   } = props;
-  const classes  = classNames("e-switch",{
+  const classes  = classNames("e-switch",className,{
     "e-switch-disabled":disabled
   })
   return <div className={classes} >

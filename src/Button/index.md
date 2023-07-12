@@ -23,7 +23,7 @@ export default () =>
     <Button text="Hello dumi!" type="info" disabled/>
     <Button text="Hello dumi!" type="warning" disabled/>
     <Button text="Hello dumi!" type="danger" disabled/>
-
+    <br/>
     <Button text="Hello dumi!" handleClick={click}/>
     <Button text="Hello dumi!" type="primary" round handleClick={click}/>
     <Button text="Hello dumi!" type="success" round handleClick={click}/>
