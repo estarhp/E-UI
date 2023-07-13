@@ -35,7 +35,7 @@ export default () => {
 | flex      | 是否flex布局      | boolean | ---                                                               | false   |
 | align     | flex布局，垂直方向布局 | string  | center/flex-start /flex-end /stretch /baseline                    | ---     |
 | justify      | flex布局,水平方向布局 | string  | start/end/center/space-around/space-between| ---     |                                         |
----
+
 
 ## Col 列
 | 参数        | 说明    | 类型     | 可选值 | 默认值 |

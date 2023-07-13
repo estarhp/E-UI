@@ -24,19 +24,19 @@ export default () =>
       <Button type="warning" disabled> Hello dumi!</Button>
       <Button type="danger" disabled> Hello dumi!</Button>
       <br/>
-    <Button handleClick={click}></Button>
+    <Button handleClick={click}>  Hello dumi!</Button>
       <Button type="primary" round handleClick={click}>  Hello dumi!</Button>
     <Button type="success" round handleClick={click}> Hello dumi! </Button>
       <Button type="info" round handleClick={click}>  Hello dumi!</Button>
       <Button type="warning" round handleClick={click}>  Hello dumi! </Button>
       <Button type="danger" round handleClick={click}> Hello dumi!</Button>
       <br/>
-    <Button  circle handleClick={click}> Hello dumi!</Button>
-      <Button  type="primary" circle handleClick={click}> Hello dumi!</Button>
-      <Button  type="success" circle handleClick={click} >Hello dumi!</Button>
-      <Button  type="info" circle handleClick={click}> Hello dumi!</Button>
-      <Button  type="warning" circle handleClick={click}> Hello dumi!</Button>
-      <Button  type="danger" circle handleClick={click}> Hello dumi!</Button>               
+    <Button  circle handleClick={click}>hhhh</Button>
+      <Button  type="primary" circle handleClick={click}> hhhh</Button>
+      <Button  type="success" circle handleClick={click} >hhhh</Button>
+      <Button  type="info" circle handleClick={click}> hhhh</Button>
+      <Button  type="warning" circle handleClick={click}>hhhh</Button>
+      <Button  type="danger" circle handleClick={click}> hhhh</Button>               
 
   </div>
 

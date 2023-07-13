@@ -16,6 +16,7 @@
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
   line-height: $line-height-base;
   white-space: nowrap;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
   &:hover {
     background: #ECF5FF;
   }
