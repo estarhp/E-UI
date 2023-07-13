@@ -6,10 +6,28 @@ nav:
 
 ```tsx
 
-import {MessageBox} from "E-UI";
+import {MessageBox, Message,Button} from "E-UI";
+import React from "react";
 
-export default ()=>{
-    return <MessageBox message={"fdsfsddasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasasas"}></MessageBox>
+
+const messageContent = (
+  <div>
+   今天在下雨 <br/>
+    你吃了么
+  </div>
+);
+
+function handleClick() {
+  Message({
+    message: messageContent,
+    type: "info"
+  })
+}
+
+export default () => {
+
+  return <Button handleClick={handleClick} text="info"></Button>
+  
 }
 
 ```

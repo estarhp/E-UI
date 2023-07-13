@@ -1,21 +1,49 @@
 @import "src/style/common";
 .e-message {
-   display: inline-block;
    text-align: center;
-   position: absolute;
-   height: auto;
-  line-height: 1.5em;
-   width: 60%;
-   background-color: $primary;
+   position: relative;
+   height: 100%;
+   line-height: 1.5em;
+   width: 100%;
    border-radius: .5rem;
-   left: 50%;
-   transform: translate(-50%);
-   top: 5rem;
    vertical-align: center;
    font-weight: 500;
    font-size: 16px;
-   opacity: .7;
-   z-index: 1000;
-  word-wrap: break-word; /* 兼容旧版浏览器 */
-  overflow-wrap: break-word;
+   word-wrap: break-word; /* 兼容旧版浏览器 */
+   overflow-wrap: break-word;
+   display: flex;
+   align-items: center;
+  justify-content: center;
+
 }
+
+
+.e-message-info{
+  background-color: #EDF2FC;
+  color: #909399;
+}
+.e-message-success {
+  background-color: #F0F9EB;
+  color: #67C23A;
+}
+.e-message-error {
+  background-color: #FEF0F0;
+  color: #F56C6C;
+}
+.e-message-warning {
+  background-color: #FDF6EC;
+  color: #E6A23C;
+}
+
+.e-message-outer {
+  position: absolute;
+  min-height: 3rem;
+  line-height: 1.5em;
+  width: 40%;
+  border-radius: .5rem;
+  left: 50%;
+  transform: translate(-50%);
+  top: 3rem;
+  z-index: 1000;
+}
+
