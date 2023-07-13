@@ -27,8 +27,8 @@ const ExampleComponent = () => {
       <Progress percentage={percentage} type="success" strokeWidth={1}/>
       <Progress percentage={percentage} type="warning" strokeWidth={1}/>
       <Progress percentage={percentage} type="danger" strokeWidth={1}/>
-      <Button handleClick={increase} text="Increase Progress" type="primary"></Button>
-      <Button handleClick={decrease} text="Decrease Progress" type="primary"></Button>
+      <Button handleClick={increase}  type="primary">Increase Progress</Button>
+      <Button handleClick={decrease}  type="primary">Decrease Progress</Button>
     </div>
   );
 };

@@ -2,7 +2,6 @@ import React, {type FC, MouseEventHandler} from 'react';
 import classNames from "classnames";
 import "./style/index.scss"
 interface ButtonProps {
-  text?: string,
   color?:string,
   background?:string,
   size?:string,
@@ -11,11 +10,12 @@ interface ButtonProps {
   className?:string,
   type?:string,
   circle:boolean
-  handleClick:MouseEventHandler<HTMLButtonElement>
+  handleClick:MouseEventHandler<HTMLButtonElement>,
+  children?:React.ReactNode
 }
 const Button: FC<ButtonProps> = (props) =>  {
   const {
-    text,
+    children,
     size="md",
     round,
     disabled=false,
@@ -42,7 +42,7 @@ const Button: FC<ButtonProps> = (props) =>  {
       className={classnames}
       disabled={disabled}
       onClick={handleClick}
-    >{text}</button>
+    >{children}</button>
   )
 };
 

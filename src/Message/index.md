@@ -48,11 +48,18 @@ function handleClick4() {
 
 export default () => {
 
-  return <div><Button handleClick={handleClick1} text="info"></Button>
-    <Button handleClick={handleClick2} text="warning"></Button>
-    <Button handleClick={handleClick3} text="success"></Button>
-    <Button handleClick={handleClick4} text="error"></Button></div>
+  return <div><Button handleClick={handleClick1} >info</Button>
+    <Button handleClick={handleClick2} >warning</Button>
+    <Button handleClick={handleClick3} >success</Button>
+    <Button handleClick={handleClick4} >error</Button></div>
   
 }
 
 ```
+| 参数        | 说明      | 类型          | 可选值                                | 默认值  |
+|-----------|---------|-------------|------------------------------------|------|
+| className | 自定义类名   | string      | ---                                | ---  |
+| type      | 类型      | string      | / success / warning / error / info | ---  |
+| message   | 显示的消息   | HTMlElement | 必填                                 | ---  |
+| duration  | 持续显示的时间 | number      | 单位毫秒                               | 2000 |
+

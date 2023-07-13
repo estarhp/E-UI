@@ -17,26 +17,26 @@ function click(){
 
 export default () =>
   <div>
-    <Button text="Hello dumi!" disabled/>
-    <Button text="Hello dumi!" type="primary" disabled/>
-    <Button text="Hello dumi!" type="success" disabled/>
-    <Button text="Hello dumi!" type="info" disabled/>
-    <Button text="Hello dumi!" type="warning" disabled/>
-    <Button text="Hello dumi!" type="danger" disabled/>
-    <br/>
-    <Button text="Hello dumi!" handleClick={click}/>
-    <Button text="Hello dumi!" type="primary" round handleClick={click}/>
-    <Button text="Hello dumi!" type="success" round handleClick={click}/>
-    <Button text="Hello dumi!" type="info" round handleClick={click}/>
-    <Button text="Hello dumi!" type="warning" round handleClick={click}/>
-    <Button text="Hello dumi!" type="danger" round handleClick={click}/>
-    <br/>
-    <Button text="1234" circle handleClick={click}/>
-    <Button text="1234" type="primary" circle handleClick={click}/>
-    <Button text="1234" type="success" circle handleClick={click}/>
-    <Button text="1234" type="info" circle handleClick={click}/>
-    <Button text="1234" type="warning" circle handleClick={click}/>
-    <Button text="1234" type="danger" circle handleClick={click}/>
+    <Button  disabled>   Hello dumi!  </Button>
+    <Button type="primary" disabled> Hello dumi! </Button>
+      <Button type="success" disabled> Hello dumi! </Button>
+      <Button type="info" disabled>  Hello dumi! </Button>
+      <Button type="warning" disabled> Hello dumi!</Button>
+      <Button type="danger" disabled> Hello dumi!</Button>
+      <br/>
+    <Button handleClick={click}></Button>
+      <Button type="primary" round handleClick={click}>  Hello dumi!</Button>
+    <Button type="success" round handleClick={click}> Hello dumi! </Button>
+      <Button type="info" round handleClick={click}>  Hello dumi!</Button>
+      <Button type="warning" round handleClick={click}>  Hello dumi! </Button>
+      <Button type="danger" round handleClick={click}> Hello dumi!</Button>
+      <br/>
+    <Button  circle handleClick={click}> Hello dumi!</Button>
+      <Button  type="primary" circle handleClick={click}> Hello dumi!</Button>
+      <Button  type="success" circle handleClick={click} >Hello dumi!</Button>
+      <Button  type="info" circle handleClick={click}> Hello dumi!</Button>
+      <Button  type="warning" circle handleClick={click}> Hello dumi!</Button>
+      <Button  type="danger" circle handleClick={click}> Hello dumi!</Button>               
 
   </div>
 

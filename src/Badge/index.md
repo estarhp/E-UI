@@ -11,7 +11,7 @@ import {Link} from "E-UI"
 import {Switch} from "E-UI"
 
 export default () => <div>
-  <Badge type="primary"><Button type="primary" text="dasd"></Button></Badge>
+  <Badge type="primary"><Button type="primary" >HOT</Button></Badge>
   <div style={{marginBottom:"20px"}}></div>
   <Badge >dashdioashdkoas</Badge>
   <div style={{marginBottom:"20px"}}></div>

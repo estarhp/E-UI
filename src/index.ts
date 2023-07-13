@@ -7,6 +7,7 @@ export {default as Link} from "./Link"
 export {default as Badge} from "./Badge"
 export {  Col, Row } from "./Layout"
 export { default as Message,MessageBox } from "./Message"
+export { default as Carousel} from "./Carousel"
 
 
 
