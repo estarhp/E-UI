@@ -17,16 +17,41 @@ const messageContent = (
   </div>
 );
 
-function handleClick() {
+function handleClick1() {
   Message({
     message: messageContent,
-    type: "info"
+    type: "info",
+    duration:5000
+  })
+}
+function handleClick2() {
+  Message({
+    message: messageContent,
+    type: "warning",
+    duration:5000
+  })
+}
+function handleClick3() {
+  Message({
+    message: messageContent,
+    type: "success",
+    duration:5000
+  })
+}
+function handleClick4() {
+  Message({
+    message: messageContent,
+    type: "error",
+    duration:5000
   })
 }
 
 export default () => {
 
-  return <Button handleClick={handleClick} text="info"></Button>
+  return <div><Button handleClick={handleClick1} text="info"></Button>
+    <Button handleClick={handleClick2} text="warning"></Button>
+    <Button handleClick={handleClick3} text="success"></Button>
+    <Button handleClick={handleClick4} text="error"></Button></div>
   
 }
 

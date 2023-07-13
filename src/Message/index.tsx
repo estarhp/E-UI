@@ -2,6 +2,7 @@ import React, {forwardRef, useEffect, useRef} from "react";
 import ReactDOM from 'react-dom';
 import classNames from "classnames";
 import "./style/index.scss"
+import {DeleteDOM} from "E-UI/Message/utils";
 
 export type type = 'success'|'warning'|'info'|'error'
 
@@ -22,22 +23,21 @@ const MessageBox = forwardRef<HTMLDivElement,MessageProps>((props,ref)=>{
 
   } = props;
 
-  const messageRef =  useRef(null)
+  const messageRef:React.LegacyRef<HTMLDivElement> =  useRef(null)
 
   const classes = classNames("e-message",className, {
             [`e-message-${type}`]:type
   })
 
-  useEffect(()=>{
-    if (messageRef.current){
-      setTimeout(()=>{
-       if (messageRef.current){
-         // @ts-ignore
-         messageRef.current.parentNode.parentNode.removeChild(messageRef.current.parentNode);
-       }
-      },duration)
-    }
+  if (duration > 0 ){
+    useEffect(()=>{
+      if (messageRef.current){
+        setTimeout(()=>{
+          DeleteDOM(messageRef)
+        },duration)
+      }
     }, [messageRef,duration])
+  }
 
   return <div className={classes} ref={messageRef} >{message}</div>
 })
@@ -46,8 +46,24 @@ const Message = function (MessageConfig:MessageProps) {
 
     const container = document.createElement("div");
     container.className = "e-message-outer"
+
+    let containerList = document.querySelectorAll(".e-message-outer")
+
+
+    let TopDistance =  20
+    if (containerList.length > 0){
+      let lastElement = containerList[containerList.length - 1];
+      let lastElementRect = lastElement.getBoundingClientRect();
+      TopDistance = lastElementRect.top + lastElementRect.height +10;
+    }
+
+   container.style.top= TopDistance + "px"
     // @ts-ignore
     body.appendChild(container)
+
+
+
+
 
   // Instantiate MessageBox as a React component
     const messageBox = <MessageBox {...MessageConfig} />;
