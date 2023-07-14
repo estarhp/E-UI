@@ -1,0 +1,29 @@
+@import "../../style/common";
+.e-textarea {
+  position: relative;
+  margin: 5px 10px;
+  display: inline-block;
+
+}
+
+.e-textarea-inner {
+  padding: 10px;
+  outline: 0;
+  border-radius: 5px;
+  background: #dad8d8;
+  &:focus {
+    border: 1px solid $primary;
+    color: black;
+    font-weight: 500;
+    background: #e1e6ee;
+  }
+}
+
+.e-textarea-disabled {
+  .e-textarea-inner {
+    cursor: not-allowed;
+    background: gray;
+  }
+}
+
+

@@ -1,0 +1,105 @@
+@import "../../style/common";
+@import "mixins";
+
+
+.e-btn {
+  position: relative;
+  display: inline-block;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #C6E2FF;
+  border-radius: 5px;
+  cursor: pointer;
+  background: white;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+  line-height: $line-height-base;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  &:hover {
+    background: #ECF5FF;
+  }
+}
+
+.e-btn-primary {
+  background:$primary;
+  &:hover {
+    background: $hover-primary;
+  }
+}
+.e-btn-success {
+  background:$success;
+  &:hover {
+    background: $hover-success;
+  }
+}
+
+.e-btn-info {
+  background:$info;
+  &:hover {
+    background: $hover-info;
+  }
+}
+
+.e-btn-warning {
+  background:$warning;
+  &:hover {
+    background: $hover-warning;
+  }
+}
+.e-btn-danger {
+  background:$danger;
+  &:hover {
+    background: $hover-danger;
+  }
+}
+
+
+//size
+.e-btn-lg {
+  @include button-size(
+      $btn-padding-y-lg,
+      $btn-padding-x-lg,
+      $btn-font-size-lg,
+      $btn-border-radius-lg
+  );
+}
+
+.e-btn-md {
+  @include button-size(
+      $btn-padding-y-md,
+      $btn-padding-x-md,
+      $btn-font-size-md,
+      $btn-border-radius-md
+  );
+
+}
+
+.e-btn-sm {
+  @include button-size(
+      $btn-padding-y-sm,
+      $btn-padding-x-sm,
+      $btn-font-size-sm,
+      $btn-border-radius-sm
+  );
+
+}
+
+.e-btn-round  {
+  border-radius: 20px;
+}
+
+.e-btn-circle {
+  min-width: 32px;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.e-btn-disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.5;
+}

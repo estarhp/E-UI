@@ -1,0 +1,70 @@
+@import "../../style/common";
+.e-progress-outer {
+  height: .7rem;
+
+  background: rgba(128, 128, 128, 0.25);
+  padding: 0;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: .3rem;
+  overflow: hidden;
+  flex-grow: 1;
+
+}
+
+
+.e-progress-inner {
+  height: 100%;
+  border-radius: .3rem;
+  text-align: right;
+  line-height: 100%;
+  transition: width .5s;
+}
+
+.e-progress-outside {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.e-progress {
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.e-progress-primary {
+  .e-progress-inner {
+    background: $primary;;
+  }
+}
+.e-progress-success {
+  .e-progress-inner {
+    background: $success;;
+  }
+}
+.e-progress-info {
+  .e-progress-inner {
+    background: $info;;
+  }
+}
+.e-progress-warning {
+  .e-progress-inner {
+    background: $warning;;
+  }
+}
+.e-progress-danger {
+  .e-progress-inner {
+  background: $danger;;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,5 @@
+@mixin input-size($input-height,$input-padding-y,$input-padding-x,$input-margin-y,$input-margin-x) {
+  height: $input-height;
+  margin: $input-margin-y $input-margin-x;
+  padding: $input-padding-y $input-padding-x;
+}

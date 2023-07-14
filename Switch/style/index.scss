@@ -1,0 +1,85 @@
+@import "../../style/common";
+
+
+.e-switch {
+  display: inline-block;
+  position: relative;
+  margin: 5px 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: center;
+  border-radius: .75rem;
+}
+
+.e-switch-label{
+  width: 3rem;
+  height: 1.5rem;
+  display: inline-block;
+  background: #FF4949;
+ border-color: #FF4949;
+  border-radius: .7rem;
+  position: relative;
+  float: left;
+
+}
+
+.e-switch-label::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 90%;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 5%;
+  margin-left: 3px;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+.e-switch input[type='checkbox']:checked + label +label {
+  background: #13CE66;
+  border-color: #13CE66;
+}
+.e-switch input[type='checkbox']:checked + label+label::after {
+  background-color: white;
+  transform: translateX(100%);
+  margin-left: -3px;
+}
+
+.e-switch-prefix {
+  position: relative;
+  float: left;
+}
+
+.e-switch .e-switch-suffix {
+  position: relative;
+  float: left;
+}
+
+
+.e-switch input[type='checkbox']:checked+label+label+label{
+  color: #66B1FF;
+}
+.e-switch input[type='checkbox']:not(:checked)+label {
+  color: #66B1FF;
+}
+
+.e-switch-disabled .e-switch-label::before {
+
+ content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #babac2;
+  z-index: 2;
+  left: 0;
+  border-radius: .7rem;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+
