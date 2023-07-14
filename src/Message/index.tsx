@@ -1,78 +1,67 @@
-import React, {forwardRef, useEffect, useRef} from "react";
+import classNames from 'classnames';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
-import classNames from "classnames";
-import "./style/index.scss"
-import {DeleteDOM} from "E-UI/Message/utils";
+import './style/index.scss';
+import { DeleteDOM } from './utils';
 
-export type type = 'success'|'warning'|'info'|'error'
+export type type = 'success' | 'warning' | 'info' | 'error';
 
 interface MessageProps {
-  message:React.ReactNode
-  className?:string
-  type?:string
-  duration?:number
-
+  message: React.ReactNode;
+  className?: string;
+  type?: string;
+  duration?: number;
 }
 
-const MessageBox = forwardRef<HTMLDivElement,MessageProps>((props,ref)=>{
-  const {
-    message,
-    className,
-    type="info",
-    duration=2000
+const MessageBox = forwardRef<HTMLDivElement, MessageProps>((props) => {
+  const { message, className, type = 'info', duration = 2000 } = props;
 
-  } = props;
+  const messageRef: React.LegacyRef<HTMLDivElement> = useRef(null);
 
-  const messageRef:React.LegacyRef<HTMLDivElement> =  useRef(null)
+  const classes = classNames('e-message', className, {
+    [`e-message-${type}`]: type,
+  });
 
-  const classes = classNames("e-message",className, {
-            [`e-message-${type}`]:type
-  })
+  useEffect(() => {
+    if (messageRef.current) {
+      setTimeout(() => {
+        DeleteDOM(messageRef);
+      }, duration);
+    }
+  }, [messageRef, duration]);
 
-  if (duration > 0 ){
-    useEffect(()=>{
-      if (messageRef.current){
-        setTimeout(()=>{
-          DeleteDOM(messageRef)
-        },duration)
-      }
-    }, [messageRef,duration])
+  return (
+    <div className={classes} ref={messageRef}>
+      {message}
+    </div>
+  );
+});
+const Message = function (MessageConfig: MessageProps) {
+  const body = document.querySelector('body');
+
+  const container = document.createElement('div');
+  container.className = 'e-message-outer';
+
+  let containerList = document.querySelectorAll('.e-message-outer');
+
+  let TopDistance = 20;
+  if (containerList.length > 0) {
+    let lastElement = containerList[containerList.length - 1];
+    let lastElementRect = lastElement.getBoundingClientRect();
+    TopDistance = lastElementRect.top + lastElementRect.height + 10;
   }
 
-  return <div className={classes} ref={messageRef} >{message}</div>
-})
-const Message = function (MessageConfig:MessageProps) {
-    const body  = document.querySelector("body")
-
-    const container = document.createElement("div");
-    container.className = "e-message-outer"
-
-    let containerList = document.querySelectorAll(".e-message-outer")
-
-
-    let TopDistance =  20
-    if (containerList.length > 0){
-      let lastElement = containerList[containerList.length - 1];
-      let lastElementRect = lastElement.getBoundingClientRect();
-      TopDistance = lastElementRect.top + lastElementRect.height +10;
-    }
-
-   container.style.top= TopDistance + "px"
-    // @ts-ignore
-    body.appendChild(container)
-
-
-
-
+  container.style.top = TopDistance + 'px';
+  // @ts-ignore
+  body.appendChild(container);
 
   // Instantiate MessageBox as a React component
-    const messageBox = <MessageBox {...MessageConfig} />;
+  const messageBox = <MessageBox {...MessageConfig} />;
 
   // Append the instantiated MessageBox component to the body
-    ReactDOM.render(messageBox, container);
+  ReactDOM.render(messageBox, container);
+};
 
-}
+export default Message;
 
-export default Message
-
-export {MessageBox}
+export { MessageBox };
