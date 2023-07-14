@@ -5,7 +5,7 @@ export default defineConfig({
   themeConfig: {
     name: 'thy-ui',
   },
-  base: '/thy-ui/',
+  base: '/thy-ui',
   publicPath: '/thy-ui/',
   exportStatic: {},
 });
