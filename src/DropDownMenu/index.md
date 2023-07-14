@@ -7,7 +7,7 @@ nav:
 # DropDownMenu
 
 ```tsx
-import { Button, DropDown, DropDownMenu, DropDownMenuItem } from 'e-ui';
+import { Button, DropDown, DropDownMenu, DropDownMenuItem } from 'thy-ui';
 
 export default () => {
   return (

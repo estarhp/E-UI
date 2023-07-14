@@ -9,7 +9,7 @@ nav:
 Input 输入框
 
 ```jsx
-import { Input } from 'e-ui';
+import { Input } from 'thy-ui';
 
 export default () => (
   <div>

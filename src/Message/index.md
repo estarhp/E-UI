@@ -5,8 +5,8 @@ nav:
 ---
 
 ```tsx
-import { Button, Message } from 'e-ui';
 import React from 'react';
+import { Button, Message } from 'thy-ui';
 
 const messageContent = (
   <div>

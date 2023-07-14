@@ -9,7 +9,7 @@ nav:
 Link 文字链接
 
 ```tsx
-import { Link } from 'e-ui';
+import { Link } from 'thy-ui';
 
 export default () => {
   return (

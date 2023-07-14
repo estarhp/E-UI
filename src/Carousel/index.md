@@ -9,7 +9,7 @@ nav:
 Carousel 轮播图
 
 ```jsx
-import { Carousel } from 'e-ui';
+import { Carousel } from 'thy-ui';
 
 export default () => {
   return (

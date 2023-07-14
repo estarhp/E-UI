@@ -7,7 +7,7 @@ nav:
 # Upload
 
 ```tsx
-import { Upload } from 'e-ui';
+import { Upload } from 'thy-ui';
 
 export default () => {
   return (

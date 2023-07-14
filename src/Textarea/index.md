@@ -9,7 +9,7 @@ nav:
 Textarea 文本框
 
 ```tsx
-import { Textarea } from 'e-ui';
+import { Textarea } from 'thy-ui';
 
 export default () => {
   return <Textarea placeholder="dasd" autosize></Textarea>;

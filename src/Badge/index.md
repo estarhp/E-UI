@@ -5,7 +5,7 @@ nav:
 ---
 
 ```tsx
-import { Badge, Button, Link } from 'e-ui';
+import { Badge, Button, Link } from 'thy-ui';
 
 export default () => (
   <div>

@@ -5,7 +5,7 @@ nav:
 ---
 
 ```tsx
-import { Switch } from 'e-ui';
+import { Switch } from 'thy-ui';
 
 function handleClick(event) {
   console.log(event.target.checked);

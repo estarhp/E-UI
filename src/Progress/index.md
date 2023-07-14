@@ -5,7 +5,7 @@ nav:
 ---
 
 ```jsx
-import { Progress, Button } from 'e-ui';
+import { Progress, Button } from 'thy-ui';
 import { useState } from 'react';
 
 const ExampleComponent = () => {

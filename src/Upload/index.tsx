@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
 import classNames from 'classnames';
 // @ts-ignore
-import { Message, Progress } from 'e-ui';
 import React, { forwardRef, useRef, useState } from 'react';
+import { Message, Progress } from 'thy-ui';
 import './style/index.scss';
 
 export interface UploadProps {

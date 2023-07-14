@@ -9,7 +9,7 @@ nav:
 Button 按钮
 
 ```jsx
-import { Button } from 'e-ui';
+import { Button } from 'thy-ui';
 
 function click() {
   alert('我被点击了');
