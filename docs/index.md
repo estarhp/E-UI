@@ -1,22 +1,16 @@
 ---
 hero:
-  title: library
-  description: A react library developed with dumi
-  actions:
-    - text: Hello
-      link: /
-    - text: World
-      link: /
-features:
-  - title: Hello
-    emoji: 💎
-    description: Put hello description here
-  - title: World
-    emoji: 🌈
-    description: Put world description here
-  - title: '!'
-    emoji: 🚀
-    description: Put ! description here
+  title: thy-ui
+  description: thy-ui 是一个使用 Dumi 开发的 React 组件库，旨在提供一组可重用的 UI 组件，以增强开发效率。
+home: true
 ---
 
-E-UI
+# HELLO
+
+- **Hello** 😀
+
+  作为一个新手，该组件库是我在蓝山的考核项目，我花了大约一周的时间进行开发。这是我第一次接触 React，并且第一次使用 TypeScript 编写项目。在过去，我主要使用 Vue，对于 React UI 组件库的经验有限，这导致我的开发效率相对较低，成果也较为不成熟。
+
+- **Test** 🚀
+
+  我计划使用 Jest 来为 thy-ui 编写测试。测试是开发过程中不可或缺的一部分，它确保组件的稳定性和可靠性。通过编写测试，我旨在覆盖各种场景和边界情况，验证组件的功能，并确保未来的更改或更新不会引入回归问题。我将努力提供全面的测试覆盖率，以提高 thy-ui 的整体质量。
