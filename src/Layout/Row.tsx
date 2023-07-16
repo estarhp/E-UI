@@ -8,9 +8,9 @@ export interface RowProps {
     className?:string
     gutter?:number
     children?:React.ReactNode
-    flex:boolean
-    align:align
-    justify:justify
+    flex?:boolean
+    align?:align
+    justify?:justify
 }
 
 const Row : FC<RowProps> = (props)=>{

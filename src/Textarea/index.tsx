@@ -1,12 +1,10 @@
 import React, {
   FocusEventHandler,
-  forwardRef, MouseEvent, TextareaHTMLAttributes, useRef, useState
+  forwardRef, useRef, useState
 } from "react";
 import classNames from "classnames";
 import "./style/index.scss"
-import * as events from "events";
-import {Simulate} from "react-dom/test-utils";
-import resize = Simulate.resize;
+
 
 export interface TextareaProps {
   placeholder?:string
@@ -23,7 +21,7 @@ export interface TextareaProps {
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement,TextareaProps>(
-  (props, ref)=>{
+  (props)=>{
     const {
       placeholder,
       rows=6,
@@ -42,7 +40,6 @@ const Textarea = forwardRef<HTMLTextAreaElement,TextareaProps>(
     })
 
     const textRef = useRef(null);
-    ref=textRef;
     const [text, setText] = useState('');
 
 

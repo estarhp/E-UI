@@ -5,7 +5,7 @@ import classNames from "classnames";
 export interface ColProps {
   className?:string
   offset?:number
-  span:number
+  span?:number
   children?:React.ReactNode
 }
 const Col:FC<ColProps> = ((props)=>{

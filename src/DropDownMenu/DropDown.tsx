@@ -1,8 +1,8 @@
-import React, {forwardRef, useEffect, useRef, useState} from "react";
+import React, {type FC, useEffect, useRef, useState} from "react";
 import classNames from "classnames";
 import "./style/DropDown.scss"
 // @ts-ignore
-import EContext from "./context.js";
+import EContext from "./context";
 
 
 export interface DropDownProps {
@@ -12,7 +12,7 @@ export interface DropDownProps {
 
 }
 
-const DropDown = forwardRef<HTMLDivElement,DropDownProps>((props, ref)=>{
+const DropDown : FC<DropDownProps> = ((props)=>{
   const {
     children,
     className,
@@ -36,12 +36,14 @@ const DropDown = forwardRef<HTMLDivElement,DropDownProps>((props, ref)=>{
 
 
   function handleClick(){
-    setTimeout(()=>{
-      setTrigger(Trigger =>{
-        return !Trigger
-      })
-    },showTimeout)
-  }
+
+      setTimeout(()=>{
+        setTrigger(Trigger =>{
+          return !Trigger
+        })
+      },showTimeout)
+    }
+
 
   const handleOutsideClick = (event: { target: any; }) => {
     // @ts-ignore
@@ -60,7 +62,7 @@ const DropDown = forwardRef<HTMLDivElement,DropDownProps>((props, ref)=>{
 
     return <EContext.Provider value={Trigger}>
     <div className={classes}  ref={dropdownRef} {...restProps}>
-       <div onClick={handleClick}>{trigger}</div>
+       <div onClick={handleClick} className="e-drop-down-trigger">{trigger}</div>
       {menu}
     </div>
   </EContext.Provider>

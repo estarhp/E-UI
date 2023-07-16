@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, {  useEffect, useRef,type FC } from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.scss';
 import { DeleteDOM } from './utils';
@@ -13,7 +13,7 @@ interface MessageProps {
   duration?: number;
 }
 
-const MessageBox = forwardRef<HTMLDivElement, MessageProps>((props) => {
+const MessageBox:FC< MessageProps> = ((props) => {
   const { message, className, type = 'info', duration = 2000 } = props;
 
   const messageRef: React.LegacyRef<HTMLDivElement> = useRef(null);
@@ -64,4 +64,4 @@ const Message = function (MessageConfig: MessageProps) {
 
 export default Message;
 
-export { MessageBox };
+export {MessageBox}

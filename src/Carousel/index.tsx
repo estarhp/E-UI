@@ -60,7 +60,7 @@ const Carousel = forwardRef<HTMLDivElement,CarouselProps>((props,ref) =>{
 
 
 
-  return <div className={classes} {...restProps}>
+  return <div className={classes} {...restProps} ref={ref}>
     <div className="e-carousel-content">
       {
         React.Children.map(
@@ -103,3 +103,5 @@ const Carousel = forwardRef<HTMLDivElement,CarouselProps>((props,ref) =>{
 });
 
 export default Carousel
+
+

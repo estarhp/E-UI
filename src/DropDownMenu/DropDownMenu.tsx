@@ -1,18 +1,19 @@
-import React,{forwardRef} from "react";
+import React,{type FC} from "react";
 import classNames from "classnames";
 import "./style/DropDownMenu.scss"
 // @ts-ignore
-import EContext from "./context.js";
+import EContext from "./context";
 
 export interface DropDownMenuProps {
   children?:React.ReactNode
   className?:string,
   divided?:boolean,
   backgroundColor?:string
-  NoHover:boolean
+  NoHover?:boolean
+
 }
 
-const DropDownMenu = forwardRef<HTMLDivElement,DropDownMenuProps>((props, ref)=>{
+const DropDownMenu : FC<DropDownMenuProps> = ((props)=>{
   const {
     children,
     className,
@@ -29,7 +30,15 @@ const DropDownMenu = forwardRef<HTMLDivElement,DropDownMenuProps>((props, ref)=>
 
   return <EContext.Consumer>
     {(value: boolean) => (
-      <ul style={{display:value ? "inline-block" : "none",backgroundColor:backgroundColor}} {...resProps} className={classes} >{children}</ul>
+      <ul style={{display:value ? "inline-block" : "none",backgroundColor:backgroundColor}} {...resProps} className={classes} >
+        {React.Children.map(children, (child, index) => {
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child, { key: index });
+          }
+          return null;
+        })}
+      </ul>
+
     )}
   </EContext.Consumer>
 })

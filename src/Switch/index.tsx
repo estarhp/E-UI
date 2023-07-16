@@ -1,4 +1,4 @@
-import React, {forwardRef, MouseEventHandler} from "react";
+import React, {forwardRef} from "react";
 import classNames from "classnames";
 import "./style/index.scss"
 
@@ -6,9 +6,9 @@ export interface SwitchProps {
    prefix?:React.ReactNode
    suffix?:React.ReactNode
   disabled?:boolean
-  className:string
-  handleClick:React.MouseEventHandler<HTMLInputElement>
-  handleChange: React.ChangeEventHandler<HTMLInputElement>
+  className?:string
+  handleClick?:React.MouseEventHandler<HTMLInputElement>
+  handleChange?: React.ChangeEventHandler<HTMLInputElement>
 
 }
 
@@ -24,7 +24,7 @@ const Switch=forwardRef<HTMLDivElement,SwitchProps>((props,ref) =>{
   const classes  = classNames("e-switch",className,{
     "e-switch-disabled":disabled
   })
-  return <div className={classes} >
+  return <div className={classes} ref={ref}>
 
       <input   type="checkbox" id="toggle" style={{display:"none"}} onClick={handleClick} onChange={handleChange} disabled={disabled}/>
       {prefix&& <label htmlFor="toggle" className="e-switch-prefix">{prefix}</label>}
