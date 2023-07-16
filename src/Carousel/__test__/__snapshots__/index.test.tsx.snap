@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel Component triggers next slide when next control is clicked 1`] = `
+<div
+  className="e-carousel"
+>
+  <div
+    className="e-carousel-content"
+  >
+    <div
+      className="e-carousel-item "
+      key="0/.$1"
+      style={
+        {
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        key="1"
+      >
+        Slide 1
+      </div>
+    </div>
+    <div
+      className="e-carousel-item e-carousel-item-active"
+      key="1/.$2"
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        key="2"
+      >
+        Slide 2
+      </div>
+    </div>
+    <div
+      className="e-carousel-item "
+      key="2/.$3"
+      style={
+        {
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        key="3"
+      >
+        Slide 3
+      </div>
+    </div>
+  </div>
+  <div
+    className="e-carousel-nav"
+  >
+    <div
+      className="e-carousel-nav-dot "
+      key="0/.$1"
+      onClick={[Function]}
+    />
+    <div
+      className="e-carousel-nav-dot e-carousel-nav-dot-active"
+      key="1/.$2"
+      onClick={[Function]}
+    />
+    <div
+      className="e-carousel-nav-dot "
+      key="2/.$3"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="e-carousel-controls"
+  >
+    <div
+      className="e-carousel-control"
+      onClick={[Function]}
+    >
+      &lt;
+    </div>
+    <div
+      className="e-carousel-control"
+      onClick={[Function]}
+    >
+      &gt;
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Carousel Component triggers previous slide when previous control is clicked 1`] = `
+<div
+  className="e-carousel"
+>
+  <div
+    className="e-carousel-content"
+  >
+    <div
+      className="e-carousel-item "
+      key="0/.$1"
+      style={
+        {
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        key="1"
+      >
+        Slide 1
+      </div>
+    </div>
+    <div
+      className="e-carousel-item "
+      key="1/.$2"
+      style={
+        {
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        key="2"
+      >
+        Slide 2
+      </div>
+    </div>
+    <div
+      className="e-carousel-item e-carousel-item-active"
+      key="2/.$3"
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        key="3"
+      >
+        Slide 3
+      </div>
+    </div>
+  </div>
+  <div
+    className="e-carousel-nav"
+  >
+    <div
+      className="e-carousel-nav-dot "
+      key="0/.$1"
+      onClick={[Function]}
+    />
+    <div
+      className="e-carousel-nav-dot "
+      key="1/.$2"
+      onClick={[Function]}
+    />
+    <div
+      className="e-carousel-nav-dot e-carousel-nav-dot-active"
+      key="2/.$3"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="e-carousel-controls"
+  >
+    <div
+      className="e-carousel-control"
+      onClick={[Function]}
+    >
+      &lt;
+    </div>
+    <div
+      className="e-carousel-control"
+      onClick={[Function]}
+    >
+      &gt;
+    </div>
+  </div>
+</div>
+`;

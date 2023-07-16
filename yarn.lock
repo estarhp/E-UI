@@ -12813,6 +12813,14 @@ through2@^4.0.0:
   resolved "https://registry.npmmirror.com/through/-/through-2.3.8.tgz"
   integrity sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==
 
+thy-ui@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/thy-ui/-/thy-ui-1.0.0.tgz#912e2b5388419eff43a16967ea2de8f2f8a5407f"
+  integrity sha512-Ph4ZFqCsv8lGfdtAs/EQOBw0kaRisLL5oeggfHpl+BL8nNHxsnognDUJCEcJkpSLdmPdsDYtWSAzSSXCIcLxcQ==
+  dependencies:
+    axios "^1.4.0"
+    classnames "^2.3.2"
+
 timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmmirror.com/timed-out/-/timed-out-4.0.1.tgz"
