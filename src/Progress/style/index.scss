@@ -6,7 +6,7 @@
   padding: 0;
   display: inline-block;
   border: 1px solid transparent;
-  border-radius: .3rem;
+  border-radius: .5rem;
   overflow: hidden;
   flex-grow: 1;
 
@@ -15,7 +15,7 @@
 
 .e-progress-inner {
   height: 100%;
-  border-radius: .3rem;
+  border-radius: .5rem;
   text-align: right;
   line-height: 100%;
   transition: width .5s;

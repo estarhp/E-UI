@@ -1,7 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import classNames from 'classnames';
 import React, { forwardRef, useRef, useState } from 'react';
-import  Message  from '../Message/index';
 import Progress from "../Progress/index"
 import './style/index.scss';
 
@@ -12,6 +11,7 @@ export interface UploadProps {
   handleResult: (result: void | AxiosResponse<any, any> | undefined) => void;
   showProgress?: boolean;
   showFileName?: boolean;
+  handleError?: Function
 }
 
 const Upload = forwardRef<HTMLDivElement, UploadProps>((props, ref) => {
@@ -22,6 +22,7 @@ const Upload = forwardRef<HTMLDivElement, UploadProps>((props, ref) => {
     handleResult,
     showProgress = true,
     showFileName = true,
+    handleError,
     ...resProps
   } = props;
 
@@ -49,16 +50,17 @@ const Upload = forwardRef<HTMLDivElement, UploadProps>((props, ref) => {
           );
           setUploadProgress(progress);
         }, //显示进度
+      }).then(result =>{
+        if (handleResult) {
+          handleResult(result);
+        }
       }).catch((error) => {
-        Message({
-          message: '上传失败：' + error,
-          type: 'error',
-        }); //Message 组件
+        if (handleError){
+          handleError(error)
+        }
       });
 
-      if (handleResult) {
-        handleResult(result);
-      }
+
     }
   }
 

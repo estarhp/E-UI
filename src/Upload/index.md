@@ -7,12 +7,25 @@ nav:
 # Upload
 
 ```tsx
-import { Upload } from 'thy-ui';
-
+import { Upload,Message } from 'thy-ui';
+function handleResult (result){
+  Message({
+    message:result.data.message,
+    type:"info",
+    duration:5000
+  })
+}
+function handleError(error){
+  Message({
+    message:error,
+    type:"error",
+    duration:5000
+  })
+}
 export default () => {
   return (
     <div style={{ width: 200, height: 200 }}>
-      <Upload action="http://8.130.101.163:8000/api/noVerifyUpload"></Upload>
+      <Upload action="http://8.130.101.163:8000/api/noVerifyUpload" handleResult={handleResult} handleError={handleError}></Upload>
     </div>
   );
 };

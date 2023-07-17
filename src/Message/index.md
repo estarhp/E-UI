@@ -6,7 +6,7 @@ nav:
 
 ```tsx
 import React from 'react';
-import { Button, Message } from 'thy-ui';
+import { Button, Message,Row,Col } from 'thy-ui';
 
 const messageContent = (
   <div>
@@ -47,10 +47,12 @@ function handleClick4() {
 export default () => {
   return (
     <div>
-      <Button handleClick={handleClick1}>info</Button>
-      <Button handleClick={handleClick2}>warning</Button>
-      <Button handleClick={handleClick3}>success</Button>
-      <Button handleClick={handleClick4}>error</Button>
+     <Row>
+       <Col><Button handleClick={handleClick1} type="info">info</Button></Col>
+       <Col><Button handleClick={handleClick2} type="warning">warning</Button></Col>
+       <Col> <Button handleClick={handleClick3} type="success">success</Button></Col>
+       <Col><Button handleClick={handleClick4} type="danger">error</Button></Col>
+     </Row>
     </div>
   );
 };

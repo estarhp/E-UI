@@ -9,7 +9,7 @@ nav:
 Button 按钮
 
 ```jsx
-import { Button } from 'thy-ui';
+import { Button,Row,Col } from 'thy-ui';
 
 function click() {
   alert('我被点击了');
@@ -17,71 +17,98 @@ function click() {
 
 export default () => (
   <div>
-    <Button disabled> Hello dumi! </Button>
-    <Button type="primary" disabled>
-      {' '}
-      Hello dumi!{' '}
-    </Button>
-    <Button type="success" disabled>
-      {' '}
-      Hello dumi!{' '}
-    </Button>
-    <Button type="info" disabled>
-      {' '}
-      Hello dumi!{' '}
-    </Button>
-    <Button type="warning" disabled>
-      {' '}
-      Hello dumi!
-    </Button>
-    <Button type="danger" disabled>
-      {' '}
-      Hello dumi!
-    </Button>
-    <br />
-    <Button handleClick={click}> Hello dumi!</Button>
-    <Button type="primary" round handleClick={click}>
-      {' '}
-      Hello dumi!
-    </Button>
-    <Button type="success" round handleClick={click}>
-      {' '}
-      Hello dumi!{' '}
-    </Button>
-    <Button type="info" round handleClick={click}>
-      {' '}
-      Hello dumi!
-    </Button>
-    <Button type="warning" round handleClick={click}>
-      {' '}
-      Hello dumi!{' '}
-    </Button>
-    <Button type="danger" round handleClick={click}>
-      {' '}
-      Hello dumi!
-    </Button>
-    <br />
-    <Button circle handleClick={click}>
-      hhhh
-    </Button>
-    <Button type="primary" circle handleClick={click}>
-      {' '}
-      hhhh
-    </Button>
-    <Button type="success" circle handleClick={click}>
-      hhhh
-    </Button>
-    <Button type="info" circle handleClick={click}>
-      {' '}
-      hhhh
-    </Button>
-    <Button type="warning" circle handleClick={click}>
-      hhhh
-    </Button>
-    <Button type="danger" circle handleClick={click}>
-      {' '}
-      hhhh
-    </Button>
+   <Row>
+     <Col> 
+       <Button disabled> Hello dumi! </Button>
+     </Col>
+     <Col>
+       <Button type="primary" disabled>
+       Hello dumi!
+     </Button></Col>
+     <Col>
+       <Button type="success" disabled>
+         Hello dumi!
+       </Button>
+     </Col>
+     <Col>
+       <Button type="info" disabled>
+         Hello dumi!
+       </Button>
+     </Col>
+     <Col>
+       <Button type="warning" disabled>
+         Hello dumi!
+       </Button>
+     </Col>
+     <Col>
+       <Button type="danger" disabled>
+         Hello dumi!
+       </Button>
+     </Col>
+   </Row>
+    <Row>
+      <Col>
+        <Button disabled> Hello dumi! </Button>
+      </Col>
+      <Col>
+        <Button type="primary" >
+          Hello dumi!
+        </Button></Col>
+      <Col>
+        <Button type="success" >
+          Hello dumi!
+        </Button>
+      </Col>
+      <Col>
+        <Button type="info" >
+          Hello dumi!
+        </Button>
+      </Col>
+      <Col>
+        <Button type="warning" >
+          Hello dumi!
+        </Button>
+      </Col>
+      <Col>
+        <Button type="danger" >
+          Hello dumi!
+        </Button>
+      </Col>
+    </Row>
+   <Row>
+     <Row>
+       <Col>
+         <Button circle handleClick={click}>
+         h
+       </Button>
+       </Col>
+       <Col>
+         <Button type="primary" circle handleClick={click}>
+           h
+         </Button>
+       </Col>
+       <Col>
+         <Button type="success" circle handleClick={click}>
+           h
+         </Button>
+       </Col>
+       <Col>
+         <Button type="info" circle handleClick={click}>
+           h
+         </Button>
+       </Col>
+       <Col>
+         <Button type="warning" circle handleClick={click}>
+           h
+         </Button>
+       </Col>
+       <Col>
+         <Button type="danger" circle handleClick={click}>
+           h
+         </Button>
+       </Col>
+     </Row>
+   </Row>
   </div>
 );
 ```

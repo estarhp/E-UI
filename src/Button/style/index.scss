@@ -92,10 +92,13 @@
 
 .e-btn-circle {
   min-width: 32px;
-  padding-right: 0;
-  padding-left: 0;
+  padding: 0;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
   text-align: center;
   border-radius: 50%;
+  white-space: nowrap;
 }
 
 .e-btn-disabled {
